@@ -1,8 +1,8 @@
 galaxy_info:
-  role_name: amazon-ssm
+  role_name: amazon-inspector
   author: diodonfrost
   company: diodonfrost
-  description: Ansible role for manage AWS system manager agent
+  description: Ansible role for manage AWS inspector agent
   license: license Apache
 
   min_ansible_version: 2.5
@@ -14,6 +14,8 @@ galaxy_info:
         - 6
     - name: Fedora
       versions:
+        - 31
+        - 30
         - 29
         - 28
         - 27
