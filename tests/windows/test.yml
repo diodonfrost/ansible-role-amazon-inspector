@@ -1,5 +1,0 @@
----
-- name: ansible-role-amazon-inspector
-  hosts: windows-machines
-  roles:
-    - ansible-role-amazon-inspector
