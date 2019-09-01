@@ -1,0 +1,18 @@
+---
+# Install aws inspector agent on Linux family system
+
+- name: Linux | Install dependency
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ inspector_dependencies_packages }}"
+
+- name: Linux | Download aws inspector agent
+  get_url:
+    url: "{{ inspector_url_download }}"
+    dest: "{{ inspector_dest_path }}/awsagent"
+    mode: 0755
+
+- name: Linux | Install aws inspector agent
+  command: "{{ inspector_dest_path }}/awsagent"
+  changed_when: false
