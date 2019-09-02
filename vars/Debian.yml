@@ -1,0 +1,12 @@
+# RedHat var file
+
+inspector_dest_path: /tmp
+
+inspector_dependencies_packages:
+  - libcurl4-openssl-dev
+  - libcurl3
+  - libgcc1
+  - libc6
+  - libstdc++6
+  - libssl-dev
+  - libpcap-dev
