@@ -1,7 +1,7 @@
 ---
 dist: xenial
-services:
-  - docker
+language: python
+python: 3.7
 
 env:
    matrix:
@@ -13,7 +13,7 @@ env:
 
 before_install:
   # Install ansible
-  - pip install ansible==${ANSIBLE_VERSION} ansible-lint
+  - python -m pip install ansible==${ANSIBLE_VERSION} ansible-lint
   - ansible --version
 
 script:
