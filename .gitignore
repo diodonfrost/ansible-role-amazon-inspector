@@ -3,3 +3,4 @@ inspec.lock
 tests/inspec/inspec.lock
 Dockerfile-kitchen*
 *.retry
+Gemfile.lock
