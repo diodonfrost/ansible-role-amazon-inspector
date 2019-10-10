@@ -22,6 +22,7 @@ verifier:
 platforms:
   - name: amazon-2
   - name: amazon-1
+  - name: centos-8
   - name: centos-7
   - name: centos-6
   - name: rhel-7
