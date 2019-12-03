@@ -18,12 +18,22 @@ Supported platforms:
     - 8
     - 7
     - 6
+- name: Fedora
+  versions:
+    - 31
+    - 30
+    - 29
+    - 28
+    - 27
+    - 26
 - name: Debian
   versions:
+    - buster
     - stretch
     - jessie
 - name: Ubuntu
   versions:
+    - disco dingo
     - bionic
     - xenial
     - trusty
@@ -31,6 +41,7 @@ Supported platforms:
   versions:
     - 2017.12
     - 2016.03
+    - 2013.09
 ```
 
 ## Role Variables

@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: amazon-inspector
+  role_name: amazon_inspector
   author: diodonfrost
   company: diodonfrost
   description: Ansible role for manage AWS inspector agent
@@ -23,10 +23,12 @@ galaxy_info:
         - 26
     - name: Debian
       versions:
+        - buster
         - stretch
         - jessie
     - name: Ubuntu
       versions:
+        - disco dingo
         - bionic
         - xenial
         - trusty
@@ -35,11 +37,6 @@ galaxy_info:
         - 2017.12
         - 2016.03
         - 2013.09
-    - name: Windows
-      versions:
-        - 2016
-        - 2012R2
-        - 2008R2
 
   galaxy_tags:
     - system
