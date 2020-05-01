@@ -16,3 +16,4 @@
 - name: Linux | Install aws inspector agent
   command: "{{ inspector_dest_path }}/awsagent"
   changed_when: false
+  when: not ansible_test_mode
