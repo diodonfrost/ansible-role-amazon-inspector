@@ -1,6 +1,7 @@
 # ansible-role-amazon-inspector
 
 [![Build Status](https://travis-ci.com/diodonfrost/ansible-role-amazon-inspector.svg?branch=master)](https://travis-ci.com/diodonfrost/ansible-role-amazon-inspector)
+[![CI](https://github.com/diodonfrost/ansible-role-amazon-inspector/workflows/CI/badge.svg)](https://github.com/diodonfrost/ansible-role-amazon-inspector/actions)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-diodonfrost.amazon_inspector-660198.svg)](https://galaxy.ansible.com/diodonfrost/amazon_inspector)
 
 This role provide a compliance for install amazon-inspector on your target host.
