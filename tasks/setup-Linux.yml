@@ -3,9 +3,8 @@
 
 - name: Linux | Install dependency
   package:
-    name: "{{ item }}"
+    name: "{{ inspector_dependencies_packages }}"
     state: present
-  with_items: "{{ inspector_dependencies_packages }}"
 
 - name: Linux | Download aws inspector agent
   get_url:
@@ -15,5 +14,11 @@
 
 - name: Linux | Install aws inspector agent
   command: "{{ inspector_dest_path }}/awsagent"
-  changed_when: false
-  when: not ansible_test_mode
+  args:
+    creates: /opt/aws/awsagent/bin/awsagent
+
+- name: Linux | Inspector service
+  service:
+    name: awsagent
+    enabled: true
+    state: started

@@ -1,0 +1,18 @@
+# Amazonlinux var file
+
+default_inspector_dest_path: /tmp
+
+openssl_package: '{%- if ansible_distribution_major_version|int == 2 -%}
+                    openssl-libs
+                  {%- else -%}
+                    openssl
+                  {%- endif -%}'
+
+inspector_dependencies_packages:
+  - libgcc
+  - libstdc++
+  - libpcap
+  - which
+  - initscripts
+  - libcurl
+  - "{{ openssl_package }}"

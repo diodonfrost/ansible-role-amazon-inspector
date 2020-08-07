@@ -1,4 +1,4 @@
-# RedHat var file
+# CentOS var file
 
 default_inspector_dest_path: /tmp
 
