@@ -16,25 +16,14 @@ Supported platforms:
 ```yaml
 - name: EL
   versions:
-    - 8
     - 7
     - 6
-- name: Fedora
-  versions:
-    - 31
-    - 30
-    - 29
-    - 28
-    - 27
-    - 26
 - name: Debian
   versions:
-    - buster
     - stretch
     - jessie
 - name: Ubuntu
   versions:
-    - disco dingo
     - bionic
     - xenial
     - trusty
@@ -76,38 +65,16 @@ role in a localhost and installing latest amazon-inspector version.
 
 ## Local Testing
 
-The preferred way of testing the role is to use amazon ec2. You will have to configure Docker on your system.
+The preferred way of locally testing the role is to use Docker. You will have to install Docker on your system.
 
- You will need access to an AWS account. IAM users should have, at a minimum, permission to manage the lifecycle of an EC2 instance along with modifying components specified in kitchen driver configs. Consider using a permissive managed IAM policy like arn:aws:iam::aws:policy/AmazonEC2FullAccess or tailor one specific to your security requirements.
-
-Next install test-kitchen:
+### Testing with Docker
 
 ```shell
-# Install dependencies
-gem install bundler
-bundle install
-```
+# Test role on CentOS 7
+distribution=centos-7 molecule test
 
-### Testing with kitchen-ec2
-
-```shell
-# List all tests with kitchen
-kitchen list
-
-# fast test on one machine
-kitchen test default-centos-7
-
-# test on all machines
-kitchen test
-
-# for development, create environment
-kitchen create default-centos-7
-
-# Apply ansible playbook
-kitchen converge default-centos-7
-
-# Apply inspec tests
-kitchen verify default-centos-7
+# Test role on Ubuntu 16.04
+distribution=ubuntu-16.04 molecule test
 ```
 
 ## License
