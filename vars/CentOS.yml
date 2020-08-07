@@ -20,5 +20,5 @@ inspector_dependencies_packages:
   - libpcap
   - which
   - initscripts
-  - "{{ openssl_package }}"
   - "{{ libcurl_package }}"
+  - "{{ openssl_package }}"

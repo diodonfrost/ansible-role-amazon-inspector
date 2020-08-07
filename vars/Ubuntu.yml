@@ -14,5 +14,4 @@ inspector_dependencies_packages:
   - libstdc++6
   - libssl-dev
   - libpcap-dev
-  - which
   - "{{ libcurl_package }}"
