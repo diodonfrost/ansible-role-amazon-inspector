@@ -1,0 +1,16 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Linux | Inspector service
+      service:
+        name: awsagent
+        enabled: true
+        state: started
+      register: inspector_service_result
+
+    - name: Linux | Verify commands outputs
+      assert:
+        that:
+          - inspector_service_result.changed == false
+        success_msg: "All tests passed"
