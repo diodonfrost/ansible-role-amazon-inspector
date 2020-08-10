@@ -1,0 +1,23 @@
+---
+# Install aws inspector agent on Windows family system
+
+- name: Windows | Download aws inspector agent
+  win_get_url:
+    url: "{{ inspector_url_download }}"
+    dest: '{{ inspector_dest_path }}\AWSAgentInstall.exe'
+
+- name: Windows | Install aws inspector agent
+  win_package:
+    path: '{{ inspector_dest_path }}\AWSAgentInstall.exe'
+    product_id: '{E4F0E562-EC3F-4729-9DB6-8E8B15AEDADB}'
+    arguments:
+      - /install
+      - /quiet
+      - /norestart
+    state: present
+
+- name: Windows | Inspector service
+  win_service:
+    name: AWSAgent
+    enabled: true
+    state: started

@@ -1,7 +1,4 @@
 ---
 # defaults file for ansible-role-amazon-inspector
 
-# Url where download aws inspector agent
-inspector_url_download: https://inspector-agent.amazonaws.com/linux/latest/install
-
 inspector_dest_path: "{{ default_inspector_dest_path }}"

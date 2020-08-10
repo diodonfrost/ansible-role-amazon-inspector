@@ -1,6 +1,7 @@
 # CentOS var file
 
 default_inspector_dest_path: /tmp
+inspector_url_download: https://inspector-agent.amazonaws.com/linux/latest/install
 
 libcurl_package: '{%- if ansible_distribution_major_version|int >= 8 -%}
                    libcurl-minimal
