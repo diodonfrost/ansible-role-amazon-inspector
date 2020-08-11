@@ -1,4 +1,4 @@
 # Windows var file
 
 default_inspector_dest_path: "{{ ansible_env.TEMP }}"
-inspector_url_download: https://inspector-agent.amazonaws.com/windows/installer/latest/AWSAgentInstall.exe
+default_inspector_url_download: https://inspector-agent.amazonaws.com/windows/installer/latest/AWSAgentInstall.exe
