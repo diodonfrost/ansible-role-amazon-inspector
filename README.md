@@ -32,6 +32,11 @@ Supported platforms:
     - 2017.12
     - 2016.03
     - 2013.09
+- name: Windows
+  versions:
+    - 2019
+    - 2016
+    - 2012R2
 ```
 
 ## Role Variables
@@ -42,8 +47,9 @@ This role does not have a variable
 ---
 # defaults file for ansible-role-amazon-inspector
 
-# Url where download aws inspector agent
-inspector_url_download: https://inspector-agent.amazonaws.com/linux/latest/install
+inspector_dest_path: "{{ default_inspector_dest_path }}"
+
+inspector_url_download: "{{ default_inspector_url_download }}"
 ```
 
 ## Dependencies
@@ -66,6 +72,7 @@ role in a localhost and installing latest amazon-inspector version.
 ## Local Testing
 
 The preferred way of locally testing the role is to use Docker. You will have to install Docker on your system.
+You can also use Virtualbox to run Windows tests locally. You will have to install Virtualbox on your system. For all our tests we use molecule.
 
 ### Testing with Docker
 
@@ -75,6 +82,16 @@ distribution=centos-7 molecule test
 
 # Test role on Ubuntu 16.04
 distribution=ubuntu-16.04 molecule test
+```
+
+### Testing with Virtualbox
+
+```shell
+# Test role on Windows 2k16
+molecule test -s windows
+
+# Test role on Windows 2k19
+distribution=windows-2k19 molecule test -s windows
 ```
 
 ## License
