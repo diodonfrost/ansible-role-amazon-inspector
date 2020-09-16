@@ -71,8 +71,18 @@ role in a localhost and installing latest amazon-inspector version.
 
 ## Local Testing
 
-The preferred way of locally testing the role is to use Docker. You will have to install Docker on your system.
-You can also use Virtualbox to run Windows tests locally. You will have to install Virtualbox on your system. For all our tests we use molecule.
+This project uses [Molecule](http://molecule.readthedocs.io/) to aid in the
+development and testing.
+
+To develop or test you'll need to have installed the following:
+
+* Linux (e.g. [Ubuntu](http://www.ubuntu.com/))
+* [Docker](https://www.docker.com/)
+* [Python](https://www.python.org/) (including python-pip)
+* [Ansible](https://www.ansible.com/)
+* [Molecule](http://molecule.readthedocs.io/)
+* [Vagrant](https://www.vagrantup.com/) (only for windows tests)
+* [Virtualbox](https://www.virtualbox.org/) (only for windows tests)
 
 ### Testing with Docker
 
