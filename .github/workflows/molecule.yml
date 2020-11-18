@@ -8,21 +8,21 @@ on:
 
 jobs:
   test:
-    name: ${{ matrix.distribution }}
+    name: ${{ matrix.image }}
     runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
       matrix:
-        distribution:
-          - centos-7
-          - centos-6
-          - ubuntu-18.04
-          - ubuntu-16.04
-          - ubuntu-14.04
-          - debian-9
-          - debian-8
-          - amazonlinux-2
-          - amazonlinux-1
+        image:
+          - ansible-centos:7
+          - ansible-centos:6
+          - ansible-ubuntu:18.04
+          - ansible-ubuntu:16.04
+          - ansible-ubuntu:14.04
+          - ansible-debian:9
+          - ansible-debian:8
+          - ansible-amazonlinux:2
+          - ansible-amazonlinux:1
 
     steps:
       - name: Checkout repository
@@ -40,4 +40,4 @@ jobs:
 
       - name: Test Ansible role
         run: |
-          distribution=${{ matrix.distribution }} molecule test
+          image=${{ matrix.image }} molecule test

@@ -4,8 +4,8 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: ${distribution:-centos-7}
-    image: diodonfrost/${distribution:-centos-7}-ansible:latest
+  - name: linux
+    image: diodonfrost/${image:-ansible-centos:7}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: yes

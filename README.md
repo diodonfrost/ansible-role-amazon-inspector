@@ -87,10 +87,10 @@ To develop or test you'll need to have installed the following:
 
 ```shell
 # Test role on CentOS 7
-distribution=centos-7 molecule test
+image=ansible-centos:7 molecule test
 
 # Test role on Ubuntu 16.04
-distribution=ubuntu-16.04 molecule test
+image=ansible-ubuntu:16.04 molecule test
 ```
 
 ### Testing with Virtualbox
@@ -100,7 +100,7 @@ distribution=ubuntu-16.04 molecule test
 molecule test -s windows
 
 # Test role on Windows 2k19
-distribution=windows-2k19 molecule test -s windows
+image=windows-2k19 molecule test -s windows
 ```
 
 ## License
