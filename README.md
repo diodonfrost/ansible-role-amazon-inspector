@@ -1,6 +1,5 @@
 # ansible-role-amazon-inspector
 
-[![Build Status](https://travis-ci.com/diodonfrost/ansible-role-amazon-inspector.svg?branch=master)](https://travis-ci.com/diodonfrost/ansible-role-amazon-inspector)
 [![molecule](https://github.com/diodonfrost/ansible-role-amazon-inspector/workflows/molecule/badge.svg)](https://github.com/diodonfrost/ansible-role-amazon-inspector/actions)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-diodonfrost.amazon_inspector-660198.svg)](https://galaxy.ansible.com/diodonfrost/amazon_inspector)
 
