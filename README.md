@@ -46,8 +46,12 @@ This role does not have a variable
 ---
 # defaults file for ansible-role-amazon-inspector
 
+# Default value defined according to the operating system
+# Define in vars/{{ ansible_distribution }}.yml
 inspector_dest_path: "{{ default_inspector_dest_path }}"
 
+# Default value defined according to the operating system
+# Define in vars/{{ ansible_distribution }}.yml
 inspector_url_download: "{{ default_inspector_url_download }}"
 ```
 
