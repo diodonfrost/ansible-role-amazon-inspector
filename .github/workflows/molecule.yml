@@ -18,7 +18,6 @@ jobs:
           - ansible-centos:6
           - ansible-ubuntu:18.04
           - ansible-ubuntu:16.04
-          - ansible-ubuntu:14.04
           - ansible-debian:9
           - ansible-debian:8
           - ansible-amazonlinux:2
