@@ -14,14 +14,14 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - ansible-centos:7
-          - ansible-centos:6
-          - ansible-ubuntu:18.04
-          - ansible-ubuntu:16.04
-          - ansible-debian:9
-          - ansible-debian:8
-          - ansible-amazonlinux:2
-          - ansible-amazonlinux:1
+          - centos:7
+          - centos:6
+          - ubuntu:18.04
+          - ubuntu:16.04
+          - debian:9
+          - debian:8
+          - amazonlinux:2
+          - amazonlinux:1
 
     steps:
       - name: Checkout repository
@@ -40,9 +40,9 @@ jobs:
       - name: Test Ansible role
         run: molecule test
         env:
-          image: ${{ matrix.image }}
+          image: ansible-${{ matrix.image }}
 
       - name: Test Ansible role with check_mode enable
         run: molecule check
         env:
-          image: ${{ matrix.image }}
+          image: ansible-${{ matrix.image }}
