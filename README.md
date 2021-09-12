@@ -61,7 +61,7 @@ None
 
 ## Example Playbook
 
-This is a sample playbook file for deploying the Ansible Galaxy 
+This is a sample playbook file for deploying the Ansible Galaxy
 role in a localhost and installing latest amazon-inspector version.
 
 ```yaml

@@ -8,7 +8,7 @@
         update_cache: yes
         state: present
       when: ansible_pkg_mgr == "yum" or ansible_pkg_mgr == "dnf"
-    
+
     - name: RedHat | Install requirements
       apt:
         name: net-tools
